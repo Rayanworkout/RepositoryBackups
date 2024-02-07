@@ -1,7 +1,8 @@
 #!/bin/bash
 
+cd /full/path/of/your/backup/directory
 # Specify the path to your text file containing GitHub links
-file_path="full/path/of/your/repositories.txt"
+file_path="./repositories.txt"
 
 # Username of the GitHub account
 # not the email address
@@ -25,6 +26,8 @@ if [ -f "$file_path" ]; then
             echo "> Folder $REPO_NAME exists, pulling latest changes..."
             echo "-----------------------------"
             cd "$REPO_NAME"
+            # Repo folder must have been created with the script so
+            # that the access token is part of the origin URL
             git pull
             cd ..
         else
