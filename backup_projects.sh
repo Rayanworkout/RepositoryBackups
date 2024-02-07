@@ -39,6 +39,8 @@ if [ -f "$file_path" ]; then
         fi
         
     done < "$file_path"
+    now=$(date +"%d/%m/%Y %H:%M")
+    echo "$now | backup ok" >> logs.txt
 else
     echo "File $file_path not found."
 fi
