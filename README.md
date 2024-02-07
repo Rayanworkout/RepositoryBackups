@@ -21,7 +21,7 @@ Rename `repositories.example.txt` to `repositories.txt`
   mv repositories.example.txt repositories.txt
 ```
 
-Write into it the name of the repos you want to keep.
+**Write into it the name of the repos you want to keep.**
 
 Now we just need to edit `backup_projects.sh`
 Open it with the text editor of your choice.
