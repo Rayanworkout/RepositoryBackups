@@ -26,15 +26,13 @@ Write into it the name of the repos you want to keep.
 Now we just need to edit `backup_projects.sh`
 Open it with the text editor of your choice.
 
-1) Mention the path of your `repositories.txt`
+1) Mention the path of your folder that will contain all your backups on line 3
 
-
-It could be `./repositories.txt` but you'll need to mention the full path if you plan to use the script with `cron` or another job automation tool.
-
+For example: `cd /home/rayan/dev/projects_backup/`
 
 2) Github Username
 
-You need to give the script your username. (Not the email address)
+You need to give the script your username.
 ```bash
   USERNAME="YOUR_USERNAME"
 ```
@@ -44,11 +42,12 @@ You need to give the script your username. (Not the email address)
 If you plan to backup private repositories, you'll need to mention your Github token. Password authentication is no longer allowed.
 
 Create a token by following the instructions [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+The token will need repositories permissions.
 
 ```bash
   TOKEN="GITHUB_TOKEN"
 ```
-Save your changes, it should be ok.
+Save your changes.
 
 Finally, make sure the bash script is executable.
 
